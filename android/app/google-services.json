@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "73920478233",
+    "project_id": "incologger",
+    "storage_bucket": "incologger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73920478233:android:169cd0b6c48a2b172e3e88",
+        "android_client_info": {
+          "package_name": "com.cyblogerz.incologger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73920478233-k4kv1nb30gg5rlla98ckpdsh0b2he6a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQPBgBcfKn7nQm_Q90cz23CcgN62uwbQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73920478233-k4kv1nb30gg5rlla98ckpdsh0b2he6a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
