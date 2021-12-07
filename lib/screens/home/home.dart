@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
               
               children: <Widget>[
                 
-                const Text("Blogs",style: TextStyle(
+                const Text("This is where we tell stories",style: TextStyle(
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                 ),),
@@ -58,14 +58,7 @@ class Home extends StatelessWidget {
         ],
         
       ),
-      bottomNavigationBar:BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label:"Home" ),
-           BottomNavigationBarItem(icon: Icon(Icons.whatshot),label:"Latest"),
-            BottomNavigationBarItem(icon: Icon(Icons.explore),label:"Explore"),
-
-        ],
-      ),
+      
     );
   }
 
