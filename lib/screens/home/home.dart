@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          BlogElement(),
+          // BlogElement(),
           
           
         ],

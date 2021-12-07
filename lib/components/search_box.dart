@@ -5,7 +5,7 @@
       padding: EdgeInsets.all(10),
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: Colors.red,
+                color: Colors.blueGrey,
                 borderRadius: BorderRadius.all(Radius.circular(10))
               ),
               child:Row(

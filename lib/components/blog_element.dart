@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BlogElement extends StatelessWidget {
-  const BlogElement({
-    Key? key,
-  }) : super(key: key);
+  BlogElement({
+   required this.title,required this.likes,required this.comments,
+  }); 
+  final String title;
+  final int likes;
+  final int comments;
 
   @override
   Widget build(BuildContext context) {
@@ -11,19 +14,20 @@ class BlogElement extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: <Widget>[
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                 height: 150,
-                width:100,
-                decoration: BoxDecoration(color: Colors.teal,
-                borderRadius: BorderRadius.circular(20)
-               
-                ),
-                
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+               height: 100,
+              width:100,
+              decoration: BoxDecoration(color: Colors.teal,
+              borderRadius: BorderRadius.circular(20)
+             
               ),
+              
             ),
+          ),
+          SizedBox(
+            width: 10,
           ),
         Expanded(
           child: Container(
@@ -51,14 +55,17 @@ class BlogElement extends StatelessWidget {
                           child: Icon(Icons.thumb_up),
                         )
                       ],),
-                      Row(children: <Widget>[
-                        Text("8k"),
-                        Padding(
-                          padding: const EdgeInsets.only(left:8.0),
-                          child: Icon(Icons.comment),
-                        ),
-                        
-                      ],),
+                      Padding(
+                        padding: const EdgeInsets.only(right:50.0),
+                        child: Row(children: <Widget>[
+                          Text("8k"),
+                          Padding(
+                            padding: const EdgeInsets.only(left:8.0),
+                            child: Icon(Icons.comment),
+                          ),
+                          
+                        ],),
+                      ),
                       
                     ],
                   ),
