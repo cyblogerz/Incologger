@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:incologger/components/blog_element.dart';
 import 'package:incologger/components/search_box.dart';
+import 'package:incologger/models/blog_shrink_model.dart';
+
 
 class Home extends StatelessWidget {
   const Home({ Key? key }) : super(key: key);
@@ -49,6 +51,13 @@ class Home extends StatelessWidget {
                   height: 25,
                 ),
                 SearchBox(),
+                ListView.builder(
+                  shrinkWrap: true, 
+                  physics: ScrollPhysics(),
+                  itemCount: blogShrinkData.length,
+                  itemBuilder: (context,index){
+                  return BlogElement(title: blogShrinkData[index].title, likes: blogShrinkData[index].likes, comments: blogShrinkData[index].comments);
+                })
               ],
             ),
           ),
