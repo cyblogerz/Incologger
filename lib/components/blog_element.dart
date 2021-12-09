@@ -3,10 +3,12 @@ import 'package:incologger/screens/blog/blog_view.dart';
 
 class BlogElement extends StatelessWidget {
   BlogElement({
-   required this.title,required this.likes,required this.comments,
+   required this.title,required this.likes,required this.comments, required this.date , required this.views,
   }); 
   final String title;
-  final int likes;
+  final String views;
+  final String date;
+  final int likes;  
   final int comments;
 
   @override
@@ -41,9 +43,10 @@ class BlogElement extends StatelessWidget {
               
                 
                 children: <Widget>[
-                  Text("05 mins read"),
+              
                   
                   Text(title),
+                  Text(date),
                   Padding(
                     padding: const EdgeInsets.only(right:10.0),
                     child: Row(

@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                   physics: ScrollPhysics(),
                   itemCount: blogShrinkData.length,
                   itemBuilder: (context,index){
-                  return BlogElement(title: blogShrinkData[index].title, likes: blogShrinkData[index].likes, comments: blogShrinkData[index].comments);
+                  return BlogElement(title: blogShrinkData[index].title, likes: blogShrinkData[index].likes, comments: blogShrinkData[index].comments ,views:blogShrinkData[index].views.toString() , date: blogShrinkData[index].date,);
                 })
               ],
             ),
