@@ -43,14 +43,24 @@ class Home extends StatelessWidget {
               
               children: <Widget>[
                 
-                const Text("This is where we tell stories",style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                ),),
-                SizedBox(
-                  height: 25,
-                ),
-                SearchBox(),
+               
+              
+                Stack(children: <Widget>[
+                  Container(
+                    height: MediaQuery.of(context).size.height*0.50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Padding(
+                      padding: const EdgeInsets.all(32.0),
+                      child: FloatingActionButton(onPressed: (){},child: Icon(Icons.bookmark_add),backgroundColor: Colors.black,),
+                    ))
+                ]),
                 ListView.builder(
                   shrinkWrap: true, 
                   physics: ScrollPhysics(),

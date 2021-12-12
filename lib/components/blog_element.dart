@@ -38,7 +38,7 @@ class BlogElement extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
-                   height: 100,
+                   height: 75,
                   width:75,
                   decoration: BoxDecoration(color: Colors.teal,
                   borderRadius: BorderRadius.circular(15)
