@@ -12,14 +12,14 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.black
         ),
         backgroundColor: Colors.white,
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right:8.0),
-            child: CircleAvatar(
+          const Padding(
+            padding: EdgeInsets.only(right:8.0),
+            child: const CircleAvatar(
               radius: 16,
               
               backgroundColor: Colors.blueGrey,
@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
         
         
       ),
-      drawer: Drawer(
+      drawer: const Drawer(
         
       ),
       body: ListView(
@@ -53,17 +53,39 @@ class Home extends StatelessWidget {
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(32),
                     ),
+                    child: Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Column(
+                    children:<Widget>[ Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Text("Here is what you need to know about DigiCupid",
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold
+                      ),),
+                      
+                    ),
+                    
+                  
+                    ]
+                  )),
                   ),
-                  Align(
+                  
+                   Align(
                     alignment: Alignment.topRight,
                     child: Padding(
                       padding: const EdgeInsets.all(32.0),
-                      child: FloatingActionButton(onPressed: (){},child: Icon(Icons.bookmark_add),backgroundColor: Colors.black,),
-                    ))
+                      child: ElevatedButton(onPressed: (){}, child: const Text("See More"),style: ElevatedButton.styleFrom(
+                        primary: Colors.black,
+                      ),
+                    ))),
+                  
                 ]),
+                 
+                
                 ListView.builder(
                   shrinkWrap: true, 
-                  physics: ScrollPhysics(),
+                  physics: const ScrollPhysics(),
                   itemCount: blogShrinkData.length,
                   itemBuilder: (context,index){
                   return BlogElement(title: blogShrinkData[index].title, likes: blogShrinkData[index].likes, comments: blogShrinkData[index].comments ,views:blogShrinkData[index].views.toString() , date: blogShrinkData[index].date,);
