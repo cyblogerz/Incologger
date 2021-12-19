@@ -7,14 +7,20 @@ Stack featuredElement(BuildContext context) {
       height: MediaQuery.of(context).size.height * 0.50,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.red,
+        image: DecorationImage(
+          image: NetworkImage("https://source.unsplash.com/LBNJi8qHIbA"),
+          fit: BoxFit.cover,
+        ),
         borderRadius: BorderRadius.circular(32),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 75.0),
         child: Text(
           "Here is what you need to know about DigiCupid",
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.white),
         ),
       ),
     ),
