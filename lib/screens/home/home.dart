@@ -33,22 +33,71 @@ class Home extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 featuredElement(context),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 8.0, top: 34, bottom: 16),
+                  child: Text(
+                    "Popular",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
+                  ),
+                ),
                 ListView.builder(
                     shrinkWrap: true,
                     physics: const ScrollPhysics(),
-                    itemCount: blogShrinkData.length,
+                    itemCount: 3,
                     itemBuilder: (context, index) {
                       return BlogElement(
-                        title: blogShrinkData[index].title,
-                        likes: blogShrinkData[index].likes,
-                        comments: blogShrinkData[index].comments,
-                        views: blogShrinkData[index].views.toString(),
-                        date: blogShrinkData[index].date,
+                        title: allData[index].title,
+                        comments: allData[index].comments,
+                        author: allData[index].author,
+                        time: allData[index].time,
+                        text: allData[index].text,
+                        image: allData[index].image,
                       );
-                    })
+                    }),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 8.0, top: 34, bottom: 16),
+                  child: Text(
+                    "Latest",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
+                  ),
+                ),
+                ListView.builder(
+                    shrinkWrap: true,
+                    physics: const ScrollPhysics(),
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return BlogElement(
+                        title: allData[index].title,
+                        comments: allData[index].comments,
+                        author: allData[index].author,
+                        time: allData[index].time,
+                        text: allData[index].text,
+                        image: allData[index].image,
+                      );
+                    }),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 8.0, top: 34, bottom: 16),
+                  child: Text(
+                    "Discover",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 26,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
+
           // BlogElement()
         ],
       ),
